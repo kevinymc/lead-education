@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>html,body{margin:0;width:900px;height:1200px;overflow:hidden;background:#e8e0d4}</style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200">
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f3eee6"/><stop offset="100%" stop-color="#ddd4c6"/>
+    </linearGradient>
+    <radialGradient id="day" cx="16%" cy="12%" r="46%">
+      <stop offset="0%" stop-color="#fffaf3"/><stop offset="72%" stop-color="#fffaf3" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="skin" cx="38%" cy="34%" r="68%">
+      <stop offset="0%" stop-color="#f6d7c2"/><stop offset="58%" stop-color="#e2b496"/><stop offset="100%" stop-color="#c4886c"/>
+    </radialGradient>
+    <linearGradient id="navy" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1b4a78"/><stop offset="100%" stop-color="#0c2c54"/>
+    </linearGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+  </defs>
+  <rect width="900" height="1200" fill="url(#wall)"/>
+  <rect width="900" height="1200" fill="url(#day)"/>
+  <rect x="48" y="64" width="250" height="380" fill="#fbf7f1"/>
+  <path d="M173 64v380M48 250h250" stroke="#e3d8c8" stroke-width="12"/>
+  <path d="M0 860h900v340H0z" fill="#e6d5be"/>
+  <path d="M40 930h820l-36 220H76z" fill="#d4bea2"/>
+
+  <!-- torso -->
+  <path d="M300 1200
+           C310 980 340 860 430 800
+           C470 770 500 760 530 768
+           C620 790 700 880 730 1040
+           L760 1200Z" fill="url(#navy)"/>
+  <path d="M470 820 C520 980 540 1100 520 1200" stroke="#0a2344" stroke-width="18" fill="none" opacity="0.28"/>
+  <!-- neck, overlapped by chin -->
+  <path d="M455 760
+           C448 700 452 650 468 620
+           C500 608 548 612 560 640
+           C572 680 560 740 548 790
+           C520 804 480 800 455 760Z" fill="#d7a888"/>
+  <ellipse cx="508" cy="748" rx="36" ry="10" fill="#c48b70" opacity="0.28"/>
+
+  <!-- arms from the shoulders down to the book -->
+  <path d="M360 820 C330 920 360 1000 450 1055" fill="none" stroke="#102c4e" stroke-width="64" stroke-linecap="round"/>
+  <path d="M690 840 C740 940 700 1020 590 1065" fill="none" stroke="#163e68" stroke-width="60" stroke-linecap="round"/>
+
+  <!-- hair sits on the scalp and stops at the jaw so the neck stays visible -->
+  <path d="M390 520
+           C380 390 460 310 560 320
+           C670 332 730 430 700 540
+           C680 620 640 680 590 700
+           C640 640 650 560 620 500
+           C560 430 470 440 430 510
+           C400 540 390 560 390 520Z" fill="#241c18"/>
+  <!-- face -->
+  <ellipse cx="520" cy="560" rx="108" ry="126" fill="url(#skin)"/>
+  <ellipse cx="418" cy="590" rx="16" ry="28" fill="#e2b394"/>
+  <ellipse cx="414" cy="592" rx="7" ry="16" fill="#c98970"/>
+  <path d="M440 500 C480 440 580 430 640 480 C590 450 500 452 450 500Z" fill="#241c18"/>
+
+  <!-- features, gaze down toward the book -->
+  <path d="M470 545 q20 -12 40 0" fill="none" stroke="#5c4638" stroke-width="3.2" stroke-linecap="round"/>
+  <ellipse cx="492" cy="566" rx="18" ry="8" fill="#f8eee6"/>
+  <path d="M474 562 q18 -10 36 2" fill="#e7c0a4"/>
+  <ellipse cx="494" cy="570" rx="6.5" ry="5" fill="#2c241e"/>
+  <path d="M560 538 q20 -12 38 2" fill="none" stroke="#5c4638" stroke-width="3.2" stroke-linecap="round"/>
+  <ellipse cx="578" cy="558" rx="17" ry="7.5" fill="#f8eee6"/>
+  <path d="M562 554 q16 -9 34 2" fill="#e7c0a4"/>
+  <ellipse cx="580" cy="562" rx="6" ry="4.6" fill="#2c241e"/>
+  <path d="M528 575 c8 28 6 46 0 62" fill="none" stroke="#c48468" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+  <path d="M498 658 q26 14 50 -2" fill="none" stroke="#b86b60" stroke-width="3.6" stroke-linecap="round"/>
+
+  <g transform="translate(250 990) rotate(-7)">
+    <rect width="400" height="200" rx="3" fill="#f7f3ec"/>
+    <path d="M200 0v200" stroke="#e4dbd0" stroke-width="3"/>
+    <rect x="28" y="36" width="130" height="6" rx="2" fill="#d5ebe7"/>
+    <rect x="28" y="56" width="100" height="6" rx="2" fill="#e5ddd2"/>
+    <rect x="28" y="76" width="116" height="6" rx="2" fill="#e5ddd2"/>
+    <rect x="224" y="36" width="130" height="6" rx="2" fill="#e5ddd2"/>
+    <rect x="224" y="56" width="96" height="6" rx="2" fill="#e5ddd2"/>
+  </g>
+  <g transform="translate(430 1045) rotate(-18)">
+    <ellipse cx="0" cy="0" rx="46" ry="26" fill="#e2b394"/>
+    <ellipse cx="34" cy="-12" rx="12" ry="16" fill="#edc7ad"/>
+  </g>
+  <g transform="translate(600 1035) rotate(8)">
+    <ellipse cx="0" cy="0" rx="40" ry="22" fill="#e2b394"/>
+    <ellipse cx="-26" cy="-8" rx="11" ry="14" fill="#edc7ad"/>
+  </g>
+  <rect width="900" height="1200" filter="url(#grain)" opacity="0.12"/>
+</svg>
+</body>
+</html>
